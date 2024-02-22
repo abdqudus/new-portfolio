@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      name="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects, open-source work and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="AbdQudus Gbadamosi's Portfolio" />
+    <meta
+      itemprop="description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Reference screenshot of updated site's header in place of content -->
+    <meta itemprop="image" content="assets/images/sharing-card.png" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://ossportfolio.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AbdQudus Gbadamosi's Portfolio" />
+    <meta
+      property="og:description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Reference screenshot of updated site's header in content -->
+    <meta property="og:image" content="assets/images/sharing-card.png" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AbdQudus Gbadamosi's Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Welcome to my portfolio website. I am a front-end web developer and I specialize in creating user-friendly, responsive and accessible websites. Explore my projects and contact me for any inquiries or collaborations."
+    />
+
+    <!-- Reference screenshot of updated site's header in content -->
+    <meta name="twitter:image" content="assets/images/sharing-card.png" />
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+
+    <!-- Preloading fonts for better performance -->
+
+    <link
+      rel="preload"
+      href="assets/fonts/Mona-Sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <title>AbdQudus Gbadamosi's Portfolio</title>
+  </head>
+
+  <body>
+    <script>
+      const theme = localStorage.getItem("theme") || "dark";
+      document.body.classList.add(theme);
+    </script>
+
+    <header class="header">
+      <div class="menu-btn-container">
+        <div class="container">
+          <button type="button" class="menu-btn">menu</button>
+        </div>
+      </div>
+
+      <nav class="nav hidden">
+        <ol class="nav-items">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#work">My Work</a></li>
+          <li class="nav-item"><a href="#blog">See Blog</a></li>
+          <li class="nav-item"><a href="#skills">My Skills</a></li>
+          <li class="nav-item">
+            <a href="#contact" data-focused="last-focused">Contact</a>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="container">
+        <div class="header-textbox">
+          <!-- Replace with your name and job title -->
+          <h1 class="h1">Hi, I'm AbdQudus Gbadamosi</h1>
+
+          <!-- Add a small introductory paragraph about yourself -->
+          <p class="header-text">
+            I am a frontend software engineer. My speciality is in creating
+            user-friendly, responsive and accessible websites.
+          </p>
+
+          <div class="header-btns">
+            <a href="#contact" class="btn btn-cta">Hire me</a>
+            <a href="#work" class="btn btn-secondary">See my work</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="work">
+        <div class="container">
+          <h2 class="h2" id="work">Selected Work</h2>
+          <div class="work-boxes">
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">LETSCHAT</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  This is a simple chat app that enables users send and receive
+                  messages in real time.
+                </p>
+                <!-- Add technologies you used to build the project -->
+                <ol class="work-technologies">
+                  <li>REACT</li>
+                  <li>FIREBASE</li>
+                  <li>TAILWIND</li>
+                  <li>REDUX</li>
+                  <li>TYPESCRIPT</li>
+                </ol>
+
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a
+                    href="https://abdquduschatapp.netlify.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/abdqudus/letsChat"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Update img src and alt attribute  -->
+
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/AbdQudus-Chat-App.webp"
+                  alt="chat app"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">EASY SHARE</h3>
+                <!-- Add small description of your project  -->
+
+                <p class="work-text">
+                  This is an app that enables a users upload files and then gets
+                  link that allows for the download of the file.
+                </p>
+                <ol class="work-technologies">
+                  <li>REACT</li>
+                  <li>TAILWIND</li>
+                  <li>SUPABASE</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a
+                    href="https://abdqudus-easyshare.netlify.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/abdqudus/easy-share"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/Easy-share.webp"
+                  alt="portfolio template"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">BOOKMARK APP</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  This is an app that allows users to organize their bookmarks
+                </p>
+                <ol class="work-technologies">
+                  <li>REACT</li>
+                  <li>TAILWIND</li>
+                  <li>INDEXED DB</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a
+                    href="https://abdqudus-bookmark.netlify.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/abdqudus/bookmark-app"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/Bookmark-App.webp"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+            <div class="work-box">
+              <div class="work-textbox">
+                <!-- Add your project title here -->
+                <h3 class="h3">INTERACTIVE BOARD APP</h3>
+                <!-- Add small description of your project  -->
+                <p class="work-text">
+                  This is an app that allows users to draw on boards and share
+                  with others in real time
+                </p>
+                <ol class="work-technologies">
+                  <li>NEXT JS</li>
+                  <li>SUPABASE</li>
+                  <li>TYPESCRIPT</li>
+                </ol>
+                <div class="work-links">
+                  <!-- Add url of project in href attribute -->
+                  <a
+                    href="https://interactive-board-seven.vercel.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="link"
+                    >Explore this project</a
+                  >
+
+                  <!-- Add link to project source code in href attribute if applicable otherwise feel free to delete or comment the markup -->
+                  <a
+                    href="https://github.com/abdqudus/interactive-board"
+                    target="_blank"
+                    rel="noopener"
+                    title="Source code"
+                  >
+                    <img
+                      src="assets/images/social-links/github.svg"
+                      alt="GitHub"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+              </div>
+              <!-- Update img src and alt attribute  -->
+              <picture class="work-img">
+                <img
+                  loading="lazy"
+                  src="assets/images/work/Interactive-Board.webp"
+                  alt="contribute dev"
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article">
+        <div class="container">
+          <h2 class="h2" id="blog">My Articles</h2>
+          <div class="article-boxes">
+            <article class="article-box featured-article">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h3">Classes In JavaScript</h3>
+                  <p class="article-text">
+                    Classes, a key component of object-oriented programming
+                    (OOP), provide a clean and intuitive syntax for creating
+                    reusable blueprints to define objects with shared properties
+                    and behaviors.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a
+                    href="https://abdqudusblog.hashnode.dev/classes-in-javascript"
+                    class="link"
+                    target="_blank"
+                    rel="noopener"
+                    >Continue reading</a
+                  >
+                </div>
+              </div>
+              <picture class="article-illustration">
+                <img
+                  src="assets/images/featured-blog.webp"
+                  alt="MacBook Pro"
+                  loading="lazy"
+                />
+              </picture>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">
+                    Mastering Search Engine Optimization (SEO): Key Techniques
+                    and Strategies
+                  </h3>
+                  <p class="article-text">
+                    Have you ever asked yourself how Google or other search
+                    engines rank websites when you search for something on them?
+                    Why is the first webpage shown worthy of the first spot,
+                    while another page -probably on page 21 or more- deserving
+                    of the ranking allocated to it?
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a
+                    href="https://abdqudusblog.hashnode.dev/mastering-search-engine-optimization-seo-key-techniques-and-strategies"
+                    class="link"
+                    target="_blank"
+                    rel="noopener"
+                    >Continue reading</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">Destructuring In JavaScript</h3>
+                  <p class="article-text">
+                    Destructuring is a powerful tool that allows us to extract
+                    values from arrays or objects and bind them to variables
+                    concisely and elegantly. It wasn't always like that. Rather,
+                    before the introduction of ES6, extracting values from
+                    complex data structures often required multiple lines of
+                    code and manual assignments.
+                  </p>
+                </div>
+                <div class="article-info">
+                  <a
+                    href="https://abdqudusblog.hashnode.dev/destructuring-in-javascript"
+                    class="link"
+                    target="_blank"
+                    rel="noopener"
+                    >Continue reading</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article-box">
+              <div class="article-textbox">
+                <div>
+                  <h3 class="h4">
+                    Demystifying Hoisting in JavaScript: Understanding Variable
+                    Declarations
+                  </h3>
+                  <div class="article-text">
+                    Hoisting is a mechanism in JavaScript that allows variables
+                    and function declarations to be moved to the top of their
+                    containing scope during the compilation phase before the
+                    code is executed. Before any javascript code runs, it passes
+                    through two phases:
+                  </div>
+                </div>
+                <div class="article-info">
+                  <a
+                    href="https://abdqudusblog.hashnode.dev/demystifying-hoisting-in-javascript-understanding-variable-declarations"
+                    class="link"
+                    target="_blank"
+                    rel="noopener"
+                    >Continue reading</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2" id="skills">My Toolkit</h2>
+          <div class="skills-imgs">
+            <img
+              src="assets/images/skills/react.webp"
+              alt="React"
+              class="skills-img"
+              loading="lazy"
+              title="React"
+            />
+            <img
+              src="assets/images/skills/supa.webp"
+              alt="Svelte"
+              class="skills-img"
+              loading="lazy"
+              title="Supabase"
+            />
+            <img
+              src="assets/images/skills/typescript.webp"
+              alt="Typescript"
+              class="skills-img"
+              loading="lazy"
+              title="Typescript"
+            />
+            <img
+              src="assets/images/skills/a11y.webp"
+              alt="Accessibility"
+              class="skills-img"
+              loading="lazy"
+              title="Web Accessibility"
+            />
+            <img
+              src="assets/images/skills/tailwind-css-icon.webp"
+              alt="Shell"
+              class="skills-img"
+              loading="lazy"
+              title="Tailwind css"
+            />
+            <img
+              src="assets/images/skills/next-js.webp"
+              alt="NextJS"
+              class="skills-img"
+              loading="lazy"
+              title="NextJS"
+            />
+            <img
+              src="assets/images/skills/graphql.webp"
+              alt="Graph Ql"
+              class="skills-img"
+              loading="lazy"
+              title="Graph QL"
+            />
+            <img
+              src="assets/images/skills/git.webp"
+              alt="Git"
+              class="skills-img"
+              loading="lazy"
+              title="Git"
+            />
+            <img
+              src="assets/images/skills/html.webp"
+              alt="CSS"
+              class="skills-img"
+              loading="lazy"
+              title="CSS"
+            />
+            <img
+              src="assets/images/skills/js.webp"
+              alt="JavaScript"
+              class="skills-img"
+              loading="lazy"
+              title="JavaScript"
+            />
+            <!-- </figure> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container">
+          <h2 class="h2" id="contact">Send Message</h2>
+          <div class="contact-content">
+            <div class="contact-textbox">
+              <!-- Please comment this component if you're not available for hire -->
+              <strong href="#" class="hire-alert">
+                <span class="indicator"></span>
+                Available for hire
+              </strong>
+              <p class="contact-text">
+                As a software engineer, I construct web interfaces and design
+                systems with a special love for accessibility and the
+                performance. I tend to code things from scratch and enjoy
+                bringing ideas to life.
+              </p>
+              <p class="contact-text">
+                Beyond coding, I'm a movie lover. Yep, I'm a big fan of great
+                movies, so you'll often find me -when i'm not coding or learning
+                new things- indoors, chilling with a good movie. 😁
+              </p>
+            </div>
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="https://formspree.io/f/xknlyajv"
+              method="POST"
+            >
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  name="user_name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-input"
+                  name="user_email"
+                  id="email"
+                  required
+                  inputmode="email"
+                />
+              </div>
+              <div class="form-field">
+                <label for="message">How can I help you?</label>
+                <textarea
+                  class="form-input"
+                  name="message"
+                  id="message"
+                  required
+                ></textarea>
+              </div>
+              <button id="send-btn" type="submit" class="btn btn-cta">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <nav>
+            <ol class="footer-links">
+              <li class="footer-link">
+                <a
+                  title="GitHub"
+                  href="https://github.com/abdqudus"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/github.svg"
+                    alt="GitHub"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a
+                  title="Hashnode"
+                  href="https://abdqudusblog.hashnode.dev/"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/hashnode.svg"
+                    alt="Codepen"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a
+                  title="Linkedin"
+                  href="https://www.linkedin.com/in/abdqudus-gbadamosi"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/linkedin.svg"
+                    alt="Linkedin"
+                /></a>
+              </li>
+              <li class="footer-link">
+                <a
+                  title="Whatsapp"
+                  href="https://wa.me/2349057188993"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    loading="lazy"
+                    src="assets/images/social-links/whatsapp.svg"
+                    alt="whatsapp"
+                /></a>
+              </li>
+            </ol>
+          </nav>
+          <p class="footer-text">
+            &copy; <span>2024</span> -
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://linkedin.com/in/abdqudus-gbadamosi"
+              >AbdQudus Gbadamosi.</a
+            >
+          </p>
+          <label class="theme-switch" for="theme-switch">
+            <span>Dark Theme</span>
+            <input type="checkbox" id="theme-switch" role="switch" />
+          </label>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
